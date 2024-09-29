@@ -13,7 +13,7 @@ TBD
 TBD
 
 ## Wireframe
-TBD
+[Here's a sneak peak of the layout.](https://www.figma.com/design/s6JEtdtapg3hFtml88yMKO/Just-a-Dram?node-id=1-11&t=x38awTjAupDkpCkC-1)
 
 ## ERD
 TBD
