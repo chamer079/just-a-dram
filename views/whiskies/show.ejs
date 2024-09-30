@@ -6,7 +6,6 @@
     <title>Just a Dram</title>
 </head>
 <body>
-    <%- include("../partials/deleteEdit") %>
     <h1>Show Whisky Page: <%= whisky.name %></h1>
     <section class="show-whisky">
         <div class="show-img">
@@ -21,6 +20,11 @@
             <p>ABV: <%= whisky.abv %></p>
             <p>Hue: <%= whisky.hue %></p>
             <p>Flavor Profile: <%= whisky.flavor %></p>
+        </div>
+        <div class="delete-button">
+            <form method="POST" action="/whiskies/<%= whisky._id %>?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
         </div>
     </section>
     <section class="reviews">
