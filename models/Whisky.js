@@ -8,10 +8,11 @@ const reviewSchema = new mongoose.Schema({
 })
 
 const whiskySchema = new mongoose.Schema({
-    whiakyImg: { type: String, requierd: true },
+    whiskyImg: { type: String, requierd: true },
     name: { type: String, required: true },
     distillery: { type: String, required: true },
     typeOfWhisky: { type: String, required: true },
+    country: { type: String, required: true },
     age: { type: String, required: true },
     proof: { type: Number, required: true },
     abv: { type: String, required: true },

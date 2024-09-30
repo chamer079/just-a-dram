@@ -15,7 +15,6 @@ const getAllWhiskies = async (req, res) => {
     }
 }
 
-
     // New Whisky - GET -> "/whiskies/new"
 
 
