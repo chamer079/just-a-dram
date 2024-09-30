@@ -70,9 +70,17 @@ const editWhisky = async (req, res) => {
     }
 }
 
-
     // Update Whisky - PUT -> "/whiskies/:id"
-
+const updateWhisky = async (req, res) => {
+    try{
+        await Whisky.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        console.log("UPDATED - testing from form:", req.body)
+        res.redirect(`whiskies/${req.params.id}`)
+    } catch(err){
+        console.log(err)
+        res.redirect(`/whiskies/${req.params.id}`)
+    }
+}
 
 
 // Exports
@@ -83,4 +91,5 @@ module.exports = {
     postWhisky,
     deleteWhisky,
     editWhisky,
+    updateWhisky,
 }
