@@ -6,7 +6,7 @@ const methodOverride = require("method-override")
 const morgan = require("morgan")
 
 // Import Controllers
-
+const whiskyCtrl = require("./controllers/whiskies")
 
 
 // App + Configurations
@@ -40,6 +40,8 @@ app.get("/", (req,res) => {
     // console.log("landing page", "index")
     res.render("index")
 })
+
+app.get("/whiskies", whiskyCtrl.getAllWhiskies)
 
 
 
