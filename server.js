@@ -47,7 +47,7 @@ app.get("/whiskies/:id", whiskiesCtrl.showWhisky)
 app.post("/whiskies", whiskiesCtrl.postWhisky)
 app.delete("/whiskies/:id", whiskiesCtrl.deleteWhisky)
 app.get("/whiskies/:id/edit", whiskiesCtrl.editWhisky)
-app.put("whiskies/:id", whiskiesCtrl.updateWhisky)
+app.put("/whiskies/:id", whiskiesCtrl.updateWhisky)
 
 
 
