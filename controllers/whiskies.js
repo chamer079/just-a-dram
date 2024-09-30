@@ -7,7 +7,7 @@ const Whisky = require("../models/Whisky")
 const getAllWhiskies = async (req, res) => {
     try{
         const allWhiskies = await Whisky.find()
-        // console.log("getAllWhiskies:", "index")
+        // console.log("rendering getAllWhiskies:", "index")
         res.render("whiskies/index")
     } catch(err){
         console.log(err)
@@ -16,7 +16,10 @@ const getAllWhiskies = async (req, res) => {
 }
 
     // New Whisky - GET -> "/whiskies/new"
-
+const createWhisky = async (req, res) => {
+//   console.log(" rendering createWhisky", "whiskies/new")
+  res.render("whiskies/new")
+}
 
 
     // Show Whisky - GET -> "/whiskies/:id"
@@ -42,4 +45,5 @@ const getAllWhiskies = async (req, res) => {
 // Exports
 module.exports = {
     getAllWhiskies,
+    createWhisky,
 }

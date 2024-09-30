@@ -42,6 +42,7 @@ app.get("/", (req,res) => {
 })
 
 app.get("/whiskies", whiskyCtrl.getAllWhiskies)
+app.get("/whiskies/new", whiskyCtrl.createWhisky)
 
 
 
