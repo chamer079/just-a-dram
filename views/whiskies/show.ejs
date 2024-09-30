@@ -7,6 +7,7 @@
 </head>
 <body>
     <%- include("../partials/nav") %>
+    <%- include("../partials/deleteEdit") %>
     <h1>Show Whisky Page: <%= whisky.name %></h1>
     <section class="show-whisky">
         <div class="show-img">
@@ -22,17 +23,17 @@
             <p>Hue: <%= whisky.hue %></p>
             <p>Flavor Profile: <%= whisky.flavor %></p>
         </div>
-        <div class="altered-buttons">
-            <div class="delete-button">
+        <!-- <div class="altered-buttons">
+            <!-- <div class="delete-button">
                 <form method="POST" action="/whiskies/<%= whisky._id %>?_method=DELETE">
                     <button type="submit">Delete</button>
                 </form>
-            </div>
-            <div class="edit-link">
+            </div> -->
+            <!-- <div class="edit-link">
                     <a href="/whiskies/<%= whisky._id %>/edit">Edit</a>
                 </form>
-            </div>
-        </div>
+            </div> -->
+        </div> -->
     </section>
     <section class="reviews">
         <div class="show-reviews">

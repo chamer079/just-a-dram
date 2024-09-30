@@ -7,6 +7,7 @@ const morgan = require("morgan")
 
 // Import Controllers
 const whiskiesCtrl = require("./controllers/whiskies")
+const reviewsCtrl = require("./controllers/reviews")
 
 
 // App + Configurations
@@ -50,12 +51,8 @@ app.get("/whiskies/:id/edit", whiskiesCtrl.editWhisky)
 app.put("/whiskies/:id", whiskiesCtrl.updateWhisky)
 
 
-
-
-
-
 // Review Routes
-
+app.post("/whiskies/:id/reviews", reviewsCtrl.postReview)
 
 
 
