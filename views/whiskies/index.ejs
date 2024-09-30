@@ -9,7 +9,7 @@
     <h1>Get All Whiskies Page</h1>
     <% whiskies.forEach(whisky => { %> 
         <div class="whisky-card">
-            <img src="<%= whisky.whiskyImg %>" alt="whisky bottle pic">
+            <a href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>" alt="whisky bottle pic"></a>
         </div>
     <% }) %>
 </body>

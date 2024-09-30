@@ -23,14 +23,24 @@ const createWhisky = async (req, res) => {
 
 
     // Show Whisky - GET -> "/whiskies/:id"
-
+const showWhisky = async (req, res) => {
+    try{
+        const foundWhisky = await Whisky.findById(req.params.id)
+        const whiskyData = { whisky: foundWhisky }
+        console.log("rendering showWhiskey:", "show")
+        res.render("whiskies/show", whiskyData)
+    } catch(err){
+        console.log(err)
+        res.redirect("/")
+    }
+}
 
 
     // Post Whisky - POST -> "/whikies"
 const postWhisky = async (req, res) => {
     try{
         await Whisky.create(req.body)
-        console.log("create req.body:", req.body)
+        // console.log("create req.body:", req.body)
         res.redirect("/whiskies")
     } catch(err){
         console.log(err)
@@ -55,5 +65,6 @@ const postWhisky = async (req, res) => {
 module.exports = {
     getAllWhiskies,
     createWhisky,
+    showWhisky,
     postWhisky,
 }

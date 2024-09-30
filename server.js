@@ -43,7 +43,7 @@ app.get("/", (req,res) => {
 
 app.get("/whiskies", whiskiesCtrl.getAllWhiskies)
 app.get("/whiskies/new", whiskiesCtrl.createWhisky)
-// showWhisky
+app.get("/whiskies/:id", whiskiesCtrl.showWhisky)
 app.post("/whiskies", whiskiesCtrl.postWhisky)
 
 
