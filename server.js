@@ -36,7 +36,10 @@ mongoose.connection.on("error", (err) => {
 
 
 // Whisky Routes
-
+app.get("/", (req,res) => {
+    // console.log("landing page", "index")
+    res.render("index")
+})
 
 
 
