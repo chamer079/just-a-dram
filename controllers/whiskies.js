@@ -21,7 +21,6 @@ const createWhisky = async (req, res) => {
   res.render("whiskies/new")
 }
 
-
     // Show Whisky - GET -> "/whiskies/:id"
 const showWhisky = async (req, res) => {
     try{
@@ -35,7 +34,6 @@ const showWhisky = async (req, res) => {
     }
 }
 
-
     // Post Whisky - POST -> "/whikies"
 const postWhisky = async (req, res) => {
     try{
@@ -47,7 +45,6 @@ const postWhisky = async (req, res) => {
         res.status(400).json({error: err.message})
     }
 }
-
 
     // Delete Whisky - DELETE -> "/whiskies/:id"
 const deleteWhisky = async (req, res) => {
@@ -61,9 +58,17 @@ const deleteWhisky = async (req, res) => {
     }
 }
 
-
     // Edit Whisky - GET -> "/whiskies/:id/edit"
-
+const editWhisky = async (req, res) => {
+    try{
+        const whiskyToEdit = await Whisky.findById(req.params.id)
+        console.log("rendering whiskyToEdit:", whiskyToEdit)
+        res.render("whiskies/edit")
+    } catch(err){
+        console.log(err)
+        res.redirect("/")
+    }
+}
 
 
     // Update Whisky - PUT -> "/whiskies/:id"
@@ -77,4 +82,5 @@ module.exports = {
     showWhisky,
     postWhisky,
     deleteWhisky,
+    editWhisky,
 }

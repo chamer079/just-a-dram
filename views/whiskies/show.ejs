@@ -21,10 +21,17 @@
             <p>Hue: <%= whisky.hue %></p>
             <p>Flavor Profile: <%= whisky.flavor %></p>
         </div>
-        <div class="delete-button">
-            <form method="POST" action="/whiskies/<%= whisky._id %>?_method=DELETE">
-                <button type="submit">Delete</button>
-            </form>
+        <div class="altered-buttons">
+            <div class="delete-button">
+                <form method="POST" action="/whiskies/<%= whisky._id %>?_method=DELETE">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+            <div class="edit-button">
+                <form>
+                    <button type="sumbit">Edit</button>
+                </form>
+            </div>
         </div>
     </section>
     <section class="reviews">
