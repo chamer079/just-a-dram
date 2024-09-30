@@ -62,8 +62,8 @@ const deleteWhisky = async (req, res) => {
 const editWhisky = async (req, res) => {
     try{
         const whiskyToEdit = await Whisky.findById(req.params.id)
-        console.log("rendering whiskyToEdit:", whiskyToEdit)
-        res.render("whiskies/edit")
+        // console.log("rendering whiskyToEdit:", whiskyToEdit)
+        res.render("whiskies/edit", { whisky: whiskyToEdit})
     } catch(err){
         console.log(err)
         res.redirect("/")
