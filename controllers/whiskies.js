@@ -27,7 +27,16 @@ const createWhisky = async (req, res) => {
 
 
     // Post Whisky - POST -> "/whikies"
-
+const postWhisky = async (req, res) => {
+    try{
+        await Whisky.create(req.body)
+        console.log("create req.body:", req.body)
+        res.redirect("/whiskies")
+    } catch(err){
+        console.log(err)
+        res.status(400).json({error: err.message})
+    }
+}
 
 
     // Delete Whisky - DELETE -> "/whiskies/:id"
@@ -46,4 +55,5 @@ const createWhisky = async (req, res) => {
 module.exports = {
     getAllWhiskies,
     createWhisky,
+    postWhisky,
 }
