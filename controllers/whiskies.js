@@ -8,7 +8,7 @@ const getAllWhiskies = async (req, res) => {
     try{
         const allWhiskies = await Whisky.find()
         // console.log("rendering getAllWhiskies:", "index")
-        res.render("whiskies/index")
+        res.render("whiskies/index", { whiskies: allWhiskies })
     } catch(err){
         console.log(err)
         res.redirect("/")

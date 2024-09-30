@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>Get All Whiskies Page</h1>
+    <% whiskies.forEach(whisky => { %> 
+        <div class="whisky-card">
+            <img src="<%= whisky.whiskyImg %>" alt="whisky bottle pic">
+        </div>
+    <% }) %>
 </body>
 </html>
