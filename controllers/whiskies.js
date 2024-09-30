@@ -50,7 +50,16 @@ const postWhisky = async (req, res) => {
 
 
     // Delete Whisky - DELETE -> "/whiskies/:id"
-
+const deleteWhisky = async (req, res) => {
+    try{
+        await Whisky.findByIdAndDelete(req.params.id)
+        console.log("Response from DB after deletion:", deleteWhisky)
+        res.redirect("/whiskies")
+    } catch(err){
+        console.log(err)
+        res.redirect("/whiskies")
+    }
+}
 
 
     // Edit Whisky - GET -> "/whiskies/:id/edit"
@@ -67,4 +76,5 @@ module.exports = {
     createWhisky,
     showWhisky,
     postWhisky,
+    deleteWhisky,
 }
