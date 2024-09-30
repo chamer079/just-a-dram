@@ -8,55 +8,57 @@
 <body>
     <h1> Tried a new whisky? Make an entry.</h1>
     <div class="entry-form">
-        <form method="POST" action="/whiskies"></form>
-        <div class="img-field">
-            <div class="img-placeholder">
-                <!-- Need to find new img placeholder image...link not working  -->
+        <form method="POST" action="/whiskies">
+            <div class="img-field">
+                <div class="img-placeholder">
+                    <img src="https://www.flaticon.com/free-icons/image-comics" alt="img placeholder picture">
+                    <!-- Need to find new img placeholder image...link not working  -->
+                </div>
+                <div class="img-input">
+                    <label for="whiskyImg"></label>
+                    <input type="text" name="whiskyImg" id="whiskyImg" placeholder="Image">
+                </div>
             </div>
-            <div class="img-input">
-                <label for="whiskyImg"></label>
-                <input type="text" name="whiskyImg" id="whiskyImg" placeholder="Image">
+            <div class="text-field">
+                <div class="name-field">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="distillery-field">
+                    <label for="distillery"></label>
+                    <input type="text" name="distillery" id="distillery" placeholder="Distillery">
+                </div>
+                <div class="typeOfWhisky-field"></div>
+                    <label for="typeOfWhisky"></label>
+                    <input type="text" name="typeOfWhisky" id="typeOfWhisky" placeholder="Type of Whisky">
+                </div>
+                <div class="country-field"></div>
+                    <label for="country"></label>
+                    <input type="text" name="country" id="country" placeholder="Country">
+                </div>
+                <div class="age-field"></div>
+                    <label for="age"></label>
+                    <input type="text" name="age" id="age" placeholder="Age">
+                </div>
+                <div class="proof-field"></div>
+                    <label for="proof"></label>
+                    <input type="text" name="proof" id="proof" placeholder="Proof">
+                </div>
+                <div class="abv-field"></div>
+                    <label for="abv"></label>
+                    <input type="text" name="abv" id="abv" placeholder="ABV">
+                </div>
+                <div class="hue-field"></div>
+                    <label for="hue"></label>
+                    <input type="text" name="hue" id="hue" placeholder="Hue">
+                </div>
+                <div class="flavor-field"></div>
+                    <label for="flavor"></label>
+                    <input type="text" name="flavor" id="flavor" placeholder="Flavor Profile">
+                </div>
             </div>
-        </div>
-        <div class="text-field">
-            <div class="name-field">
-                <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Name">
-            </div>
-            <div class="distillery-field">
-                <label for="distillery"></label>
-                <input type="text" name="distillery" id="distillery" placeholder="Distillery">
-            </div>
-            <div class="typeOfWhisky-field"></div>
-                <label for="typeOfWhisky"></label>
-                <input type="text" name="typeOfWhisky" id="typeOfWhisky" placeholder="Type of Whisky">
-            </div>
-            <div class="country-field"></div>
-                <label for="country"></label>
-                <input type="text" name="country" id="country" placeholder="Country">
-            </div>
-            <div class="age-field"></div>
-                <label for="age"></label>
-                <input type="text" name="age" id="age" placeholder="Age">
-            </div>
-            <div class="proof-field"></div>
-                <label for="proof"></label>
-                <input type="text" name="proof" id="proof" placeholder="Proof">
-            </div>
-            <div class="abv-field"></div>
-                <label for="abv"></label>
-                <input type="text" name="abv" id="abv" placeholder="ABV">
-            </div>
-            <div class="hue-field"></div>
-                <label for="hue"></label>
-                <input type="text" name="hue" id="hue" placeholder="Hue">
-            </div>
-            <div class="flavor-field"></div>
-                <label for="flavor"></label>
-                <input type="text" name="flavor" id="flavor" placeholder="Flavor Profile">
-            </div>
-        </div>
-        <button class="form-button" type="submit">Post Entry</button>
+            <button class="form-button" type="submit">Post Entry</button>
+        </form>
     </div>
 </body>
 </html>
