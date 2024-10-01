@@ -7,7 +7,6 @@ const Whisky = require("../models/Whisky")
 const getAllWhiskies = async (req, res) => {
     try{
         const allWhiskies = await Whisky.find()
-        // console.log("rendering getAllWhiskies:", "index")
         res.render("whiskies/index", { whiskies: allWhiskies })
     } catch(err){
         console.log(err)
@@ -17,7 +16,6 @@ const getAllWhiskies = async (req, res) => {
 
     // New Whisky - GET -> "/whiskies/new"
 const createWhisky = async (req, res) => {
-//   console.log(" rendering createWhisky", "whiskies/new")
   res.render("whiskies/new")
 }
 
@@ -38,7 +36,6 @@ const showWhisky = async (req, res) => {
 const postWhisky = async (req, res) => {
     try{
         await Whisky.create(req.body)
-        // console.log("create req.body:", req.body)
         res.redirect("/whiskies")
     } catch(err){
         console.log(err)
@@ -50,7 +47,6 @@ const postWhisky = async (req, res) => {
 const deleteWhisky = async (req, res) => {
     try{
         await Whisky.findByIdAndDelete(req.params.id)
-        console.log("Response from DB after deletion:", deleteWhisky)
         res.redirect("/whiskies")
     } catch(err){
         console.log(err)
@@ -62,7 +58,6 @@ const deleteWhisky = async (req, res) => {
 const editWhisky = async (req, res) => {
     try{
         const whiskyToEdit = await Whisky.findById(req.params.id)
-        // console.log("rendering whiskyToEdit:", whiskyToEdit)
         res.render("whiskies/edit", { whisky: whiskyToEdit})
     } catch(err){
         console.log(err)
@@ -74,7 +69,6 @@ const editWhisky = async (req, res) => {
 const updateWhisky = async (req, res) => {
     try{
         await Whisky.findByIdAndUpdate(req.params.id, req.body, { new: true })
-        // console.log("UPDATED - testing from form:", req.body)
         res.redirect(`/whiskies/${req.params.id}`)
     } catch(err){
         console.log(err)
