@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px 0 70px;
+    padding-left: 15px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

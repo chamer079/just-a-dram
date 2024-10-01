@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
     <title>Just a Dram</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
     <section class="all-whiskies">
         <% whiskies.forEach(whisky => { %> 
             <div class="whisky-card">
-                <a href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>" alt="whisky bottle pic"></a>
+                <a href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>" width="150px" height="auto" alt="whisky bottle pic"></a>
             </div>
         <% }) %>
     </section>
