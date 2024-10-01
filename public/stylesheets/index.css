@@ -2,11 +2,6 @@ body{
     flex-direction: column;
 }
 
-header{
-    margin: 10px, 0, 50px;
-    
-}
-
 .all-whiskies{
     display: flex;
     flex-flow: row wrap;

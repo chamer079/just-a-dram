@@ -7,3 +7,7 @@ body {
     background-color: #F2EDED;
     font-family: "Montserrat", "Verdana", sans-serif;
 }
+
+header {
+    margin: 10px, 0, 50px;
+}
