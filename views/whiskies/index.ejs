@@ -7,11 +7,12 @@
 </head>
 <body>
     <%- include("../partials/nav") %>
-    <h1>Get All Whiskies Page</h1>
-    <% whiskies.forEach(whisky => { %> 
-        <div class="whisky-card">
-            <a href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>" alt="whisky bottle pic"></a>
-        </div>
-    <% }) %>
+    <section class="all-whiskies">
+        <% whiskies.forEach(whisky => { %> 
+            <div class="whisky-card">
+                <a href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>" alt="whisky bottle pic"></a>
+            </div>
+        <% }) %>
+    </section>
 </body>
 </html>
