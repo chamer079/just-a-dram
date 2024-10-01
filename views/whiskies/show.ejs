@@ -23,17 +23,6 @@
             <p>Hue: <%= whisky.hue %></p>
             <p>Flavor Profile: <%= whisky.flavor %></p>
         </div>
-        <!-- <div class="altered-buttons">
-            <!-- <div class="delete-button">
-                <form method="POST" action="/whiskies/<%= whisky._id %>?_method=DELETE">
-                    <button type="submit">Delete</button>
-                </form>
-            </div> -->
-            <!-- <div class="edit-link">
-                    <a href="/whiskies/<%= whisky._id %>/edit">Edit</a>
-                </form>
-            </div> -->
-        </div> -->
     </section>
     <section class="reviews">
         <div class="show-reviews">
@@ -43,8 +32,17 @@
         </div>
         <div class="review-form">
             <h2>Add a Review</h2>
-            <p>Review Form Goes Here</p>
-            <!-- Will Need to Create a Review Form Here -->
+            <form method="POST" action="/whiskies/<%= whisky._id %>/reviews">
+                <div class="review-field">
+                    <label for="review"></label>
+                    <input id="review" type="text" name="review" placeholder="Write your review here."/>
+                </div>
+                <div class="user-review-field">
+                    <label for="user"></label>
+                    <input id="user" type="text" name="user" placeholder="Username"/>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
         </div>
     </section>
 </body>
