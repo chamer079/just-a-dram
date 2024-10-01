@@ -11,13 +11,12 @@
     <div class="edit-form"></div>
         <form method="POST" action="/whiskies/<%= whisky._id %>/?_method=PUT">
             <div class="img-field">
-                <div class="img-placeholder">
-                    
-                    <!-- Need to find new img placeholder image...link not working  -->
+                <div class="show-img">
+                    <img src="<%= whisky.whiskyImg %>" alt="whisky bottle">
                 </div>
                 <div class="img-input">
                     <label for="whiskyImg">Image:</label>
-                    <input type="text" name="whiskyImg" id="whiskyImg" value="<%= whisky.whiskyImg %>" >
+                    <input type="text" name="whiskyImg" id="whiskyImg" value="<%= whisky.whiskyImg %>"/>
                 </div>
             </div>
             <div class="text-field">
