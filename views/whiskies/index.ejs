@@ -6,7 +6,11 @@
     <title>Just a Dram</title>
 </head>
 <body>
-    <%- include("../partials/nav") %>
+    <header>
+        <div class="nav-bar">
+            <%- include("../partials/nav") %>
+        </div>
+    </header>
     <section class="all-whiskies">
         <% whiskies.forEach(whisky => { %> 
             <div class="whisky-card">

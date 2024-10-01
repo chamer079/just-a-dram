@@ -6,17 +6,23 @@
     <title>Just a Dram</title>
 </head>
 <body>
-    <%- include("../partials/nav") %>
-    <%- include("../partials/deleteEdit") %>
-    <h1>Show Whisky Page: <%= whisky.name %></h1>
+    <header>
+        <div class="nav-bar">
+            <%- include("../partials/nav") %>
+        </div>
+        <div class="delete-edit-buttons">
+            <%- include("../partials/deleteEdit") %>
+        </div>
+    </header>
     <section class="show-whisky">
         <div class="show-img">
             <img src="<%= whisky.whiskyImg %>" alt="whisky bottle">
         </div>
         <div class="show-data">
+            <p>Whisky Name: <%= whisky.name %></p>
             <p>Distillery: <%= whisky.distillery %></p>
             <p>Type: <%= whisky.typeOfWhisky %></p>
-            <p>Country: <%= whisky.country %></p>
+            <p>Origin: <%= whisky.country %></p>
             <p>Age: <%= whisky.age %></p>
             <p>Proof <%= whisky.proof %></p>
             <p>ABV: <%= whisky.abv %></p>
