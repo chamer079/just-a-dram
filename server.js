@@ -4,6 +4,7 @@ const dotenv = require("dotenv")
 const mongoose = require("mongoose")
 const methodOverride = require("method-override")
 const morgan = require("morgan")
+const path = require("path")
 
 // Import Controllers
 const whiskiesCtrl = require("./controllers/whiskies")
@@ -23,7 +24,7 @@ app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride("_method"))
 app.use(morgan("dev"))
-
+app.use(express.static(path.join(__dirname, "public")))
 
 // DB Connection
 mongoose.connect(process.env.MONGODB_URI)
