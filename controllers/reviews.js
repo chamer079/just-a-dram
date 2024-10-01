@@ -9,7 +9,7 @@ const postReview = async (req, res) => {
         foundWhisky.reviews.push(req.body)
 
         await foundWhisky.save()
-        console.log("posted review for:", foundWhisky)
+        // console.log("posted review for:", foundWhisky)
         res.redirect(`/whiskies/${req.params.id}`)
     } catch(err){
         console.log(err)
