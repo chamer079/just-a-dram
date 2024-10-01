@@ -19,7 +19,9 @@ TBD
 TBD
 
 ## Attibutions
-TBD
+Thank you to the following for sharing such high quality images on [Unsplash](https://unsplash.com/) that were used in this project:
+* [Reiseuhu](https://unsplash.com/@reiseuhu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for the [rickhouse](https://unsplash.com/photos/pile-of-oak-barrels-inside-tunnel-6DnEjXP3WP4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) photo.
+  
 
 ## Technologies Used
 * Mongo DB
