@@ -1,19 +1,45 @@
 body {
-    flex-direction: column;
+    flex-flow: column wrap;
+}
+
+h1 {
+    font-family: "Garamond", "Baskerville", serif;
+    color:#540B0E;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 40px;
 }
 
 .edit-form {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
 }
 
 .content-section {
     width: 100vw;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
+}
+
+.show-img {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    width: auto;
+    height: 352px;
+}
+
+.img-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+img {
+    border-radius: 5px;
 }
 
 input {
@@ -39,38 +65,8 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: end;
     gap: 8px;
-}
-
-.name-field {
-    align-self: center;
-}
-
-.distillery-field {
-    align-self: center;
-}
-
-.whisky-type-field {
-    align-self: center;
-}
-
-.origin-field {
-    align-self: center;
-}
-
-.age-field {
-    align-self: center;
-}
-.proof-field {
-    align-self: center;
-}
-
-.abv-field {
-    align-self: center;
-}
-
-.hue-field {
-    align-self: center;
 }
 
 .update-button {
