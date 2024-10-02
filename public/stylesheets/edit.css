@@ -5,10 +5,10 @@ body {
 h1 {
     font-family: "Garamond", "Baskerville", serif;
     color:#540B0E;
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bold;
     text-align: center;
-    margin: 0 0 40px;
+    margin: -15px 0 60px;
 }
 
 .edit-form {
@@ -18,10 +18,10 @@ h1 {
 }
 
 .content-section {
-    width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    width: 100vw;
 }
 
 .show-img {
