@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/edit.css">
     <title>Just a Dram</title>
 </head>
 <body>
-    <%- include("../partials/nav") %>
-    <h1>Edit Page</h1>
-    <div class="edit-form"></div>
+    <header>
+        <%- include("../partials/nav") %>
+    </header>
+    <div class="edit-form">
         <form method="POST" action="/whiskies/<%= whisky._id %>/?_method=PUT">
             <div class="img-field">
                 <div class="show-img">
-                    <img src="<%= whisky.whiskyImg %>" alt="whisky bottle">
+                    <img src="<%= whisky.whiskyImg %>" width="250px" height="350px" alt="whisky bottle">
                 </div>
                 <div class="img-input">
                     <label for="whiskyImg">Image:</label>
@@ -29,33 +31,33 @@
                     <label for="distillery">Distillery:</label>
                     <input type="text" name="distillery" id="distillery" value="<%= whisky.distillery %>"/>
                 </div>
-                <div class="typeOfWhisky-field"></div>
+                <div class="whisky-type-field">
                     <label for="typeOfWhisky">Type:</label>
                     <input type="text" name="typeOfWhisky" id="typeOfWhisky" value="<%= whisky.typeOfWhisky %>"/>
                 </div>
-                <div class="origin"></div>
+                <div class="origin">
                     <label for="origin">Origin:</label>
                     <input type="text" name="origin" id="origin" value="<%= whisky.origin %>"/>
                 </div>
-                <div class="age-field"></div>
+                <div class="age-field">
                     <label for="age">Age:</label>
                     <input type="text" name="age" id="age" value="<%= whisky.age %>"/>
                 </div>
-                <div class="proof-field"></div>
+                <div class="proof-field">
                     <label for="proof">Proof:</label>
                     <input type="text" name="proof" id="proof" value="<%= whisky.proof %>"/>
                 </div>
-                <div class="abv-field"></div>
+                <div class="abv-field">
                     <label for="abv">ABV:</label>
                     <input type="text" name="abv" id="abv" value="<%= whisky.abv %>"/>
                 </div>
-                <div class="hue-field"></div>
+                <div class="hue-field">
                     <label for="hue">Hue:</label>
                     <input type="text" name="hue" id="hue" value="<%= whisky.hue %>"/>
                 </div>
-                <div class="flavor-field"></div>
+                <div class="flavor-field">
                     <label for="flavor">Flavor:</label>
-                    <input type="text" name="flavor" id="flavor" value="<%= whisky.flavor %>"/>
+                    <textarea type="text" name="flavor" id="flavor" row="25" cols="25" maxlength="500" placeholder="<%= whisky.flavor %>"></textarea>
                 </div>
             </div>
             <button class="update-form-button" type="submit">Update Entry</button>
