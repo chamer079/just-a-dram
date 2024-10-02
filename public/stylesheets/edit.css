@@ -2,8 +2,96 @@ body {
     flex-direction: column;
 }
 
-form{
+.edit-form {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100vw;
+}
+
+.content-section {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+input {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    background-color: #F2EDED;
+    padding: 5px;
+    text-align: center;
+    width: 180px;
+}
+
+textarea {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    background-color: #F2EDED;
+    padding: 5px;
+    text-align: center;
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.name-field {
+    align-self: center;
+}
+
+.distillery-field {
+    align-self: center;
+}
+
+.whisky-type-field {
+    align-self: center;
+}
+
+.origin-field {
+    align-self: center;
+}
+
+.age-field {
+    align-self: center;
+}
+.proof-field {
+    align-self: center;
+}
+
+.abv-field {
+    align-self: center;
+}
+
+.hue-field {
+    align-self: center;
+}
+
+.update-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;    
+}
+
+button {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #F2EDED;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    font-family: "Garamond", "Baskerville", serif;
+    color: #540B0E;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: #540B0E;
+    color: #F2EDED;
 }
