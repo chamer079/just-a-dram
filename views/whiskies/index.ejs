@@ -16,7 +16,12 @@
     <section class="all-whiskies">
         <% whiskies.forEach(whisky => { %> 
             <div class="whisky-card">
-                <a class="card-link" href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>" width="150px" height="250px" alt="whisky bottle pic"></a>
+                <div class="card-img">
+                    <a class="card-link" href="/whiskies/<%= whisky._id %>"><img src="<%= whisky.whiskyImg %>"  alt="whisky bottle pic">
+                </div>
+                <div class="card-text">
+                    <p><%= whisky.name %> | <%= whisky.typeOfWhisky %></p>
+                </div>
             </div>
         <% }) %>
     </section>
