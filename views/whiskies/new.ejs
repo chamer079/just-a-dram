@@ -1,72 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/new.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/new.css" />
     <title>Just a Dram</title>
-</head>
-<body>
-    <header>
-        <%- include("../partials/nav") %>
-    </header>
-    <h1> Tried a new whisky? Make an entry.</h1>
+  </head>
+  <body>
+    <header><%- include("../partials/nav") %></header>
+    <h1>Tried a new whisky? Make an entry.</h1>
     <section class="post-form">
-        <form method="POST" action="/whiskies"></form>
-            <div class="content-section">
-                <div class="img-field">
-                    <div class="img-placeholder">
-                        <img src="/images/insert-picture-icon.png" width="250px" height="250px" alt="placholder image">
-                    </div>
-                    <div class="img-input">
-                        <label for="whiskyImg"></label>
-                        <input type="text" name="whiskyImg" id="whiskyImg" placeholder="Image">
-                    </div>
-                </div>
-                <div class="text-field">
-                    <div class="name-field">
-                        <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Name" />
-                    </div>
-                    <div class="distillery-field">
-                        <label for="distillery"></label>
-                        <input type="text" name="distillery" id="distillery" placeholder="Distillery"/>
-                    </div>
-                    <div class="whisky-type-field">
-                        <label for="typeOfWhisky"></label>
-                        <input type="text" name="typeOfWhisky" id="typeOfWhisky" placeholder="Type of Whisky"/>
-                    </div>
-                    <div class="origin-field">
-                        <label for="origin"></label>
-                        <input type="text" name="origin" id="origin" placeholder="Origin"/>
-                    </div>
-                    <div class="age-field">
-                        <label for="age"></label>
-                        <input type="text" name="age" id="age" placeholder="Age"/>
-                    </div>
-                    <div class="proof-field">
-                        <label for="proof"></label>
-                        <input type="text" name="proof" id="proof" placeholder="Proof"/>
-                    </div>
-                    <div class="abv-field">
-                        <label for="abv"></label>
-                        <input type="text" name="abv" id="abv" placeholder="ABV"/>
-                    </div>
-                    <div class="hue-field">
-                        <label for="hue"></label>
-                        <input type="text" name="hue" id="hue" placeholder="Hue"/>
-                    </div>
-                    <div class="flavor-field">
-                        <label for="flavor"></label>
-                        <textarea type="text" name="flavor" id="flavor" placeholder="Flavor Profile" row="25" cols="25" maxlength="500"></textarea>
-                    </div>
-                </div>
+      <form method="POST" action="/whiskies">
+        <div class="content-section">
+          <div class="img-field">
+            <div class="img-placeholder">
+              <img
+                src="/images/insert-picture-icon.png"
+                width="250px"
+                height="250px"
+                alt="placholder image"
+              />
             </div>
-            <div class="post-button">
-                <button type="submit">Create Entry</button>
+            <div class="img-input">
+              <label for="whiskyImg"></label>
+              <input
+                type="text"
+                name="whiskyImg"
+                id="whiskyImg"
+                placeholder="Image"
+              />
             </div>
-        </form>
+          </div>
+          <div class="text-field">
+            <div class="name-field">
+              <label for="name"></label>
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="distillery-field">
+              <label for="distillery"></label>
+              <input
+                type="text"
+                name="distillery"
+                id="distillery"
+                placeholder="Distillery"
+              />
+            </div>
+            <div class="whisky-type-field">
+              <label for="typeOfWhisky"></label>
+              <input
+                type="text"
+                name="typeOfWhisky"
+                id="typeOfWhisky"
+                placeholder="Type of Whisky"
+              />
+            </div>
+            <div class="origin-field">
+              <label for="origin"></label>
+              <input
+                type="text"
+                name="origin"
+                id="origin"
+                placeholder="Origin"
+              />
+            </div>
+            <div class="age-field">
+              <label for="age"></label>
+              <input type="text" name="age" id="age" placeholder="Age" />
+            </div>
+            <div class="proof-field">
+              <label for="proof"></label>
+              <input type="text" name="proof" id="proof" placeholder="Proof" />
+            </div>
+            <div class="abv-field">
+              <label for="abv"></label>
+              <input type="text" name="abv" id="abv" placeholder="ABV" />
+            </div>
+            <div class="hue-field">
+              <label for="hue"></label>
+              <input type="text" name="hue" id="hue" placeholder="Hue" />
+            </div>
+            <div class="flavor-field">
+              <label for="flavor"></label>
+              <textarea
+                type="text"
+                name="flavor"
+                id="flavor"
+                placeholder="Flavor Profile"
+                row="25"
+                cols="25"
+                maxlength="500"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="post-button">
+          <button type="submit">Create Entry</button>
+        </div>
+      </form>
     </section>
-</body>
+  </body>
 </html>

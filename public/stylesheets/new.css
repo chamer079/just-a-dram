@@ -42,6 +42,7 @@ input::placeholder {
 
 textarea::placeholder {
     color: #000000;
+    font-family: "Montserrat", "Verdana", sans-serif;
 }
 
 #whiskyImg {

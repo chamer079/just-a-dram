@@ -36,6 +36,7 @@ const showWhisky = async (req, res) => {
 const postWhisky = async (req, res) => {
     try{
         await Whisky.create(req.body)
+        console.log("createing post:", req.body)
         res.redirect("/whiskies")
     } catch(err){
         console.log(err)

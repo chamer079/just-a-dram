@@ -2,7 +2,6 @@ body {
     flex-flow: column wrap;
 }
 
-
 .show-content {
     display: flex;
     flex-flow: row wrap;
@@ -27,20 +26,20 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 97vw;
 }
 
 .show-reviews {
     display: flex;
     flex-direction: column;
     align-items: center;   
-    width: 96vw;
 }
 
 h2 {
     justify-content: center;
     font-family: "Garamond", "Baskerville", serif;
     color: #540B0E;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 600;
     text-decoration: underline solid #540B0E 1px;
     text-underline-offset: 10px;   
@@ -55,7 +54,46 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 96vw;
+    line-height: 24px;
 }
 
+.review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    background-color: #F2EDED;
+    padding: 5px;
+    text-align: center;
+}
+
+textarea::placeholder {
+    color: #000000;
+    font-family: "Montserrat", "Verdana", sans-serif;
+}
+
+input {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    background-color: #F2EDED;
+    padding: 5px;
+    text-align: center;
+    width: 180px;
+}
+
+input::placeholder {
+    color: #000000;
+}
