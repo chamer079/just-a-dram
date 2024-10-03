@@ -20,7 +20,7 @@
     <section class="show-page">
         <div class="show-content">
             <div class="show-img">
-                <img src="<%= whisky.whiskyImg %>" width="250px" height="350px" alt="whisky bottle">
+                <img src="<%= whisky.whiskyImg %>" width="350px" height="550px" alt="whisky bottle">
             </div>
             <div class="show-data">
                 <p>Whisky Name: <%= whisky.name %></p>
@@ -51,7 +51,7 @@
                 <form method="POST" action="/whiskies/<%= whisky._id %>/reviews">
                     <div class="review-field">
                         <label for="review"></label>
-                        <textarea id="review" type="text" name="review" placeholder="Write your review here." rows="5" cols="45"  maxlength="500"></textarea>
+                        <textarea id="review" type="text" name="review" placeholder="Write your review here." rows="15" cols="85"  maxlength="500"></textarea>
                     </div>
                     <div class="user-review-field">
                         <label for="user"></label>

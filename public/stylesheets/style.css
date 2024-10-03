@@ -6,6 +6,7 @@ body {
     display: flex;
     background-color: #F2EDED;
     font-family: "Montserrat", "Verdana", sans-serif;
+    font-size: 24px;
 }
 
 header {
