@@ -5,7 +5,7 @@ body {
 h1 {
     font-family: "Garamond", "Baskerville", serif;
     color: #540B0E;
-    font-size: 38px;
+    font-size: 64px;
     font-weight: bold;
     text-align: center;
     margin: -15px 0 60px;
@@ -18,19 +18,19 @@ h1 {
 }
 
 input {
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     border-radius: 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 7px 6px rgba(0, 0, 0, .25);
     background-color: #F2EDED;
     padding: 5px;
     text-align: center;
-    width: 180px;
+    padding: 12px 60px;
 }
 
 textarea {
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     border-radius: 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 7px 6px rgba(0, 0, 0, .25);
     background-color: #F2EDED;
     padding: 5px;
     text-align: center;
@@ -38,22 +38,26 @@ textarea {
 
 input::placeholder {
     color: #000000;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
 textarea::placeholder {
     color: #000000;
     font-family: "Montserrat", "Verdana", sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
 #whiskyImg {
-    width: 250px;
+    width: 350px;
 }
 
 .text-field {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .post-button {
@@ -63,15 +67,17 @@ textarea::placeholder {
 }
 
 button {
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     border-radius: 5px;
     background-color: #F2EDED;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 7px 6px rgba(0, 0, 0, .25);
     font-family: "Garamond", "Baskerville", serif;
     color: #540B0E;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
     padding: 5px 22px;
+    margin-top: 20px;
 }
 
 button:hover {

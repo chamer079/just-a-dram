@@ -98,7 +98,6 @@ input {
     background-color: #F2EDED;
     padding: 15px 75px;
     text-align: center;
-    /* width: 180px; */
 }
 
 input::placeholder {
