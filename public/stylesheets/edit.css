@@ -5,30 +5,32 @@ body {
 h1 {
     font-family: "Garamond", "Baskerville", serif;
     color:#540B0E;
-    font-size: 38px;
-    font-weight: bold;
+    font-size: 64px;
+    font-weight: 600;
     text-align: center;
     margin: -15px 0 60px;
 }
 
 .edit-form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.content-section {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;;
+}
+
+.field-section {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     justify-content: space-evenly;
-    width: 96vw;
+    /* width: 96vw; */
 }
 
 .show-img {
     border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-    width: auto;
+    /* width: auto; */
     height: 351.8px;
 }
 
@@ -43,23 +45,27 @@ img {
 }
 
 input {
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     border-radius: 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 7px 6px rgba(0, 0, 0, .25);
     background-color: #F2EDED;
     padding: 5px;
     text-align: center;
-    width: 180px;
+    padding: 15px 60px;
+    font-size: 24px;
+    width: 350px;
 }
 
 textarea {
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     border-radius: 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 7px 6px rgba(0, 0, 0, .25);
     background-color: #F2EDED;
     padding: 5px;
     text-align: center;
+    font-size: 24px;
 }
+
 
 .text-field {
     display: flex;
