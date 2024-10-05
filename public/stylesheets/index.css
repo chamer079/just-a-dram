@@ -37,4 +37,13 @@ img {
     background-color: #FEFAE0;
     letter-spacing: 1px;
     border-radius: 0 0 5px 5px;
+    height: 150px;
+}
+
+.card-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
 }
