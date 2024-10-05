@@ -27,6 +27,19 @@ img {
     border-radius: 5px;
 }
 
+.text-content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.show-data {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 60px;
+}
+
 .reviews {
     display: flex;
     flex-direction: column;

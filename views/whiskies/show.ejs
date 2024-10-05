@@ -19,19 +19,29 @@
     </header>
     <section class="show-page">
         <div class="show-content">
-            <div class="show-img">
-                <img src="<%= whisky.whiskyImg %>" width="350px" height="550px" alt="whisky bottle">
+            <div class="img-content">
+                <div class="show-img">
+                    <img src="<%= whisky.whiskyImg %>" width="350px" height="550px" alt="whisky bottle">
+                </div>
             </div>
-            <div class="show-data">
-                <p>Whisky Name: <%= whisky.name %></p>
-                <p>Distillery: <%= whisky.distillery %></p>
-                <p>Type: <%= whisky.typeOfWhisky %></p>
-                <p>Origin: <%= whisky.origin %></p>
-                <p>Age: <%= whisky.age %></p>
-                <p>Proof <%= whisky.proof %></p>
-                <p>ABV: <%= whisky.abv %></p>
-                <p>Hue: <%= whisky.hue %></p>
-                <p>Flavor Profile: <%= whisky.flavor %></p>
+            <div class="text-content">
+                <div class="show-data">
+                    <div class="pirm">
+                        <p>Whisky Name: <%= whisky.name %></p>
+                        <p>Distillery: <%= whisky.distillery %></p>
+                        <p>Type: <%= whisky.typeOfWhisky %></p>
+                        <p>Origin: <%= whisky.origin %></p>
+                    </div>
+                    <div class="secondary">
+                        <p>Age: <%= whisky.age %></p>
+                        <p>Proof <%= whisky.proof %></p>
+                        <p>ABV: <%= whisky.abv %></p>
+                        <p>Hue: <%= whisky.hue %></p>
+                    </div>
+                </div>
+                    <div class="field-content">
+                        <p>Flavor Profile: <%= whisky.flavor %></p>
+                    </div>    
             </div>
         </div>   
         <div class="reviews">
