@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/show.css">
-    <link rel="stylesheet" href="/stylesheets/delete-edit.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
+    <link rel="stylesheet" href="/stylesheets/delete-edit.css" />
     <title>Just a Dram</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="nav-bar">
-            <%- include("../partials/nav") %>
-        </div>
-        <div class="delete-edit-buttons">
-            <%- include("../partials/deleteEdit") %>
-        </div>
+      <div class="nav-bar"><%- include("../partials/nav") %></div>
+      <div class="delete-edit-buttons">
+        <%- include("../partials/deleteEdit") %>
+      </div>
     </header>
     <section class="show-page">
-        <div class="show-content">
-            <div class="img-content">
-                <div class="show-img">
-                    <img src="<%= whisky.whiskyImg %>" width="350px" height="550px" alt="whisky bottle">
-                </div>
-            </div>
-            <div class="text-content">
-                <div class="show-data">
-                    <div class="pirm">
-                        <p><span class="field">Whisky Name:</span> <%= whisky.name %></p>
-                        <p><span class="field">Distillery:</span> <%= whisky.distillery %></p>
-                        <p><span class="field">Type:</span> <%= whisky.typeOfWhisky %></p>
-                        <p><span class="field">Origin:</span> <%= whisky.origin %></p>
-                    </div>
-                    <div class="secondary">
-                        <p><span class="field">Age:</span> <%= whisky.age %></p>
-                        <p><span class="field">Proof:</span> <%= whisky.proof %></p>
-                        <p><span class="field">ABV:</span> <%= whisky.abv %></p>
-                        <p><span class="field">Hue:</span> <%= whisky.hue %></p>
-                    </div>
-                </div>
-                    <div class="field-content">
-                        <p><span class="field">Flavor Profile:</span> <%= whisky.flavor %></p>
-                    </div>    
-            </div>
-        </div>   
-        <div class="reviews">
-            <div class="show-reviews">
-                <h2>Reviews</h2>
-                <% whisky.reviews.forEach(review => { %> 
-                    <ul>
-                        <div class="review-post">
-                            <li><%= review.review %></li>
-                            <li>-<%= review.user %></li>
-                        </div>
-                    </ul>
-                <% }) %>
-            </div>
-            <div class="review-form">
-                <h2>Add a Review</h2>
-                <form method="POST" action="/whiskies/<%= whisky._id %>/reviews">
-                    <div class="review-field">
-                        <label for="review"></label>
-                        <textarea id="review" type="text" name="review" placeholder="Write your review here." rows="5" cols="50"  maxlength="500"></textarea>
-                    </div>
-                    <div class="user-review-field">
-                        <label for="user"></label>
-                        <input id="user" type="text" name="user" placeholder="Username"/>
-                    </div>
-                    <button class="review-submit" type="submit">Add Review</button>
-                </form>
-            </div>
+      <div class="show-content">
+        <div class="img-content">
+          <div class="show-img">
+            <img
+              src="<%= whisky.whiskyImg %>"
+              width="350px"
+              height="550px"
+              alt="whisky bottle"
+            />
+          </div>
         </div>
+        <div class="text-content">
+          <div class="show-data">
+            <div class="pirm">
+              <p><span class="field">Whisky Name:</span> <%= whisky.name %></p>
+              <p>
+                <span class="field">Distillery:</span> <%= whisky.distillery %>
+              </p>
+              <p><span class="field">Type:</span> <%= whisky.typeOfWhisky %></p>
+              <p><span class="field">Origin:</span> <%= whisky.origin %></p>
+            </div>
+            <div class="secondary">
+              <p><span class="field">Age:</span> <%= whisky.age %></p>
+              <p><span class="field">Proof:</span> <%= whisky.proof %></p>
+              <p><span class="field">ABV:</span> <%= whisky.abv %></p>
+              <p><span class="field">Hue:</span> <%= whisky.hue %></p>
+            </div>
+          </div>
+          <div class="field-content">
+            <p>
+              <span class="field">Flavor Profile:</span> <%= whisky.flavor %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="show-reviews">
+          <h2>Reviews</h2>
+          <% whisky.reviews.forEach(review => { %>
+          <ul>
+            <div class="review-post">
+              <li><%= review.review %></li>
+              <li>-<%= review.user %></li>
+            </div>
+          </ul>
+          <% }) %>
+        </div>
+        <div class="review-form">
+          <h2>Add a Review</h2>
+          <form method="POST" action="/whiskies/<%= whisky._id %>/reviews">
+            <div class="review-field">
+              <label for="review"></label>
+              <textarea
+                id="review"
+                type="text"
+                name="review"
+                placeholder="Write your review here."
+                rows="5"
+                cols="50"
+                maxlength="500"
+              ></textarea>
+            </div>
+            <div class="user-review-field">
+              <label for="user"></label>
+              <input id="user" type="text" name="user" placeholder="Username" />
+            </div>
+            <button class="review-submit" type="submit">Add Review</button>
+          </form>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>

@@ -24,8 +24,6 @@ Thank you to the following for sharing such high quality images on [Unsplash](ht
 
 Thank you to ChatGPT for creating the Glencarien glass logo.
   
-  
-
 ## Technologies Used
 * Mongo DB
 * Express
@@ -34,8 +32,11 @@ Thank you to ChatGPT for creating the Glencarien glass logo.
 ## Next Steps
 * Incorporate user auth.
 * Incoorporate a CSS library.
+* Add a rating scal / system to a particular whisky entry.
 * Adjustments to the the following fields:
     * Hue field: Add a color meter.
     * Flavor field: Incorporate a flavor wheel.
 * Add serach functionality.
+* Add a like / dislike to the reviews.
+* Incorporate a sub-reviews to a review.
 
